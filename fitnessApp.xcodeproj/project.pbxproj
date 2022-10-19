@@ -14,6 +14,10 @@
 		5C8D136028FF35EF007251FD /* fitnessAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D135F28FF35EF007251FD /* fitnessAppTests.swift */; };
 		5C8D136A28FF35EF007251FD /* fitnessAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D136928FF35EF007251FD /* fitnessAppUITests.swift */; };
 		5C8D136C28FF35EF007251FD /* fitnessAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D136B28FF35EF007251FD /* fitnessAppUITestsLaunchTests.swift */; };
+		86416D4429005706000EAAD6 /* ActivityRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86416D4329005706000EAAD6 /* ActivityRingView.swift */; };
+		86416D4929007666000EAAD6 /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86416D4829007666000EAAD6 /* ProgressRingView.swift */; };
+		86934F0E28FF37B3009ED690 /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86934F0D28FF37B3009ED690 /* HealthStore.swift */; };
+		86934F1128FF37F6009ED690 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86934F1028FF37F6009ED690 /* DataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,11 @@
 		5C8D136528FF35EF007251FD /* fitnessAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fitnessAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C8D136928FF35EF007251FD /* fitnessAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fitnessAppUITests.swift; sourceTree = "<group>"; };
 		5C8D136B28FF35EF007251FD /* fitnessAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fitnessAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		86416D4329005706000EAAD6 /* ActivityRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRingView.swift; sourceTree = "<group>"; };
+		86416D4829007666000EAAD6 /* ProgressRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
+		86934F0D28FF37B3009ED690 /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
+		86934F1028FF37F6009ED690 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
+		86934F1228FF397A009ED690 /* fitnessApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fitnessApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +83,7 @@
 		5C8D134228FF35ED007251FD = {
 			isa = PBXGroup;
 			children = (
+				86934F1628FF4DF1009ED690 /* IOS */,
 				5C8D134D28FF35ED007251FD /* fitnessApp */,
 				5C8D135E28FF35EF007251FD /* fitnessAppTests */,
 				5C8D136828FF35EF007251FD /* fitnessAppUITests */,
@@ -94,6 +104,9 @@
 		5C8D134D28FF35ED007251FD /* fitnessApp */ = {
 			isa = PBXGroup;
 			children = (
+				86416D4529005B18000EAAD6 /* Classes */,
+				86934F1228FF397A009ED690 /* fitnessApp.entitlements */,
+				86934F0F28FF37BB009ED690 /* Views */,
 				5C8D134E28FF35ED007251FD /* fitnessAppApp.swift */,
 				5C8D135028FF35ED007251FD /* ContentView.swift */,
 				5C8D135228FF35EF007251FD /* Assets.xcassets */,
@@ -125,6 +138,31 @@
 				5C8D136B28FF35EF007251FD /* fitnessAppUITestsLaunchTests.swift */,
 			);
 			path = fitnessAppUITests;
+			sourceTree = "<group>";
+		};
+		86416D4529005B18000EAAD6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				86934F0D28FF37B3009ED690 /* HealthStore.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		86934F0F28FF37BB009ED690 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				86934F1028FF37F6009ED690 /* DataView.swift */,
+				86416D4329005706000EAAD6 /* ActivityRingView.swift */,
+				86416D4829007666000EAAD6 /* ProgressRingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		86934F1628FF4DF1009ED690 /* IOS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = IOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +295,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86416D4929007666000EAAD6 /* ProgressRingView.swift in Sources */,
 				5C8D135128FF35ED007251FD /* ContentView.swift in Sources */,
+				86934F0E28FF37B3009ED690 /* HealthStore.swift in Sources */,
+				86416D4429005706000EAAD6 /* ActivityRingView.swift in Sources */,
+				86934F1128FF37F6009ED690 /* DataView.swift in Sources */,
 				5C8D134F28FF35ED007251FD /* fitnessAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,23 +456,27 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = fitnessApp/fitnessApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"fitnessApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 794B97P7XU;
+				DEVELOPMENT_TEAM = VF65W3BJ6N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Need step count";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Need step count";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sgusick.fitnessApp;
+				PRODUCT_BUNDLE_IDENTIFIER = whackett.fitnessApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -443,23 +489,27 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = fitnessApp/fitnessApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"fitnessApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 794B97P7XU;
+				DEVELOPMENT_TEAM = VF65W3BJ6N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Need step count";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Need step count";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sgusick.fitnessApp;
+				PRODUCT_BUNDLE_IDENTIFIER = whackett.fitnessApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -474,11 +524,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 794B97P7XU;
+				DEVELOPMENT_TEAM = VF65W3BJ6N;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sgusick.fitnessAppTests;
+				PRODUCT_BUNDLE_IDENTIFIER = whackett.fitnessAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -494,11 +544,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 794B97P7XU;
+				DEVELOPMENT_TEAM = VF65W3BJ6N;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sgusick.fitnessAppTests;
+				PRODUCT_BUNDLE_IDENTIFIER = whackett.fitnessAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -513,10 +563,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 794B97P7XU;
+				DEVELOPMENT_TEAM = VF65W3BJ6N;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sgusick.fitnessAppUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = whackett.fitnessAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -531,10 +581,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 794B97P7XU;
+				DEVELOPMENT_TEAM = VF65W3BJ6N;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sgusick.fitnessAppUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = whackett.fitnessAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
