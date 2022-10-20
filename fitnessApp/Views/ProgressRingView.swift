@@ -30,17 +30,16 @@ extension Color {
 struct ProgressRingView: View {
     
     @Binding var progress: CGFloat
-    //@State var progress: CGFloat
-    //@State var progress : CGFloat
-    //@State var progress : CGFloat
-    var goal : CGFloat
+    var goal : CGFloat // add option for user input in settings / when creating account
     var colors: [Color] = [Color.darkRed, Color.lightRed]
     
     
     var body: some View {
         ZStack {
             Text("\(Int(progress))/ \(Int(goal))\n")
+                .foregroundColor(.black)
             Text("\n\tSteps").opacity(0.6)
+                .foregroundColor(.black)
             Circle()
                 .stroke(Color.outlineRed, lineWidth: 30)
             Circle()
@@ -66,18 +65,7 @@ struct ProgressRingView: View {
                 .shadow(color: progress/goal > 0.96 ? Color.black.opacity(0.1): Color.clear, radius: 3, x: 4, y: 0)
         }.frame(idealWidth: 150, maxWidth: 200, idealHeight: 150, maxHeight: 200, alignment: .center)
             .offset(y: 150)
+            .animation(.spring(response: 0.6, dampingFraction: 1.0, blendDuration: 1.0), value: progress)
     }
+    
 }
-//struct ProgrssRingView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ProgressRingView(progress: CGFloat(0.5))
-//    }
-//}
-
-//
-//ZStack {
-//    Color.black
-//        .edgesIgnoringSafeArea(.all)
-//    ActivityRingView(progress: CGFloat(0.5))
-//        .fixedSize()
-//}

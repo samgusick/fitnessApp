@@ -27,6 +27,8 @@ struct ContentView: View {
         stepCount = 1
         goal = 5000
         progress = 0.5
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.black]
+       
     }
     
     private func updateStepsUI(_ statisticsCollection:  HKStatisticsCollection) {
@@ -46,6 +48,21 @@ struct ContentView: View {
         
     }
     
+    private func updateAppearance(){
+        if let healthStore = healthStore {
+            healthStore.requestAuthorization { success in
+                if success {
+                    healthStore.calculateSteps { statisticsCollection in
+                        if let statisticsCollection = statisticsCollection {
+                            // update the UI
+                            updateStepsUI(statisticsCollection)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
     var body: some View {
         ZStack{
             NavigationView{
@@ -53,7 +70,8 @@ struct ContentView: View {
                     
                     Text(Date(), style: .date)
                         .padding(10)
-                        .offset(y: -260)
+                        .offset(y: 20)
+                        .foregroundColor(.black)
                 
                     HStack (alignment: .lastTextBaseline){
                         //Text("Fitness App")
@@ -61,54 +79,48 @@ struct ContentView: View {
                         //.padding()
                         Text("Timer\n0:00")
                             .fixedSize(horizontal: false, vertical: true)
+                            .foregroundColor(.black)
                             .multilineTextAlignment(.center)
-                            .padding()
                             .frame(width: 150, height: 150)
                             .background(Rectangle().fill(Color(red: 0.671, green: 0.78, blue: 0.9))
                                 .shadow(radius: 3)
                                 .cornerRadius(10))
-                            .offset(y: -275)
-                            .padding(10)
-                        
-                        Text("\(stepCount)\nSteps")
-                            .fixedSize(horizontal: false, vertical: true)
-                            .multilineTextAlignment(.leading)
-                            .padding()
-                            .frame(width: 150, height: 150)
-                            .background(Rectangle().fill(Color(red: 0.671, green: 0.78, blue: 0.9))
-                                .shadow(radius: 3)
-                                .cornerRadius(10))
-                            .offset(y: -275)
-                            .padding(10)
+                            .padding(35)
+                            .offset(y: -15)
+                        Button {
+                            // random example functionality eventually going to take user to a new window
+                            stepCount+=1
+                            progress = CGFloat( stepCount )
+                            
+                        } label: {
+                            Text( "\(stepCount)\nSteps")
+                                .fixedSize(horizontal: false, vertical: true)
+                                .frame(width: 150, height: 150)
+                                .multilineTextAlignment(.leading)
+                                .padding(0)
+                                .background(Rectangle().fill(Color(red: 0.671, green: 0.78, blue: 0.9))
+                                    .shadow(radius: 3)
+                                    .cornerRadius(10))
+                                
+                                .foregroundColor(.darkRed)
+                            Image(systemName: "figure.walk.circle").offset(x: -50, y: -50).foregroundColor(.darkRed)
+                                
+                        }
+                        .offset(y: -15)
+                        .position(x: 100, y: 90)
                         
                     }
-    
                     
                     
                 }
-                .navigationTitle("Fitness App")
+                .navigationBarTitle(Text("Fitness App"))
+                .navigationBarItems(leading: Image(systemName: "figure.walk").foregroundColor(.black))//systemName: "figure.run")) not available ios 15
                 .font(.title)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-//                .background(Color(red: 0.39, green: 0.46, blue: 0.7))
-//                .cornerRadius(10)
-//                .padding(10)
                 .background(Color(red: 0.4, green: 0.6, blue: 0.8).edgesIgnoringSafeArea(.all))
-                
-                
             }
             .onAppear {
-                if let healthStore = healthStore {
-                    healthStore.requestAuthorization { success in
-                        if success {
-                            healthStore.calculateSteps { statisticsCollection in
-                                if let statisticsCollection = statisticsCollection {
-                                    // update the UI
-                                    updateStepsUI(statisticsCollection)
-                                }
-                            }
-                        }
-                    }
-                }
+                updateAppearance()
             }
             ProgressRingView(progress : $progress, goal: goal)
                 .offset(y: -100)

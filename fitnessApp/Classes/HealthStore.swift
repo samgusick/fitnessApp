@@ -25,7 +25,7 @@ class HealthStore {
     init() {
         if HKHealthStore.isHealthDataAvailable() {
             healthStore = HKHealthStore()
-            days = -7
+            days = -7 // add option for user input in settings / when creating account
         }
         else {
             days = 0
