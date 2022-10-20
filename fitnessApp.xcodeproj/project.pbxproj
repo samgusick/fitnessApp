@@ -17,6 +17,7 @@
 		86416D4929007666000EAAD6 /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86416D4829007666000EAAD6 /* ProgressRingView.swift */; };
 		86934F0E28FF37B3009ED690 /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86934F0D28FF37B3009ED690 /* HealthStore.swift */; };
 		86934F1128FF37F6009ED690 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86934F1028FF37F6009ED690 /* DataView.swift */; };
+		86ADA58D2901B87300067988 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ADA58C2901B87300067988 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		86934F0D28FF37B3009ED690 /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
 		86934F1028FF37F6009ED690 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
 		86934F1228FF397A009ED690 /* fitnessApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fitnessApp.entitlements; sourceTree = "<group>"; };
+		86ADA58C2901B87300067988 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +105,10 @@
 			isa = PBXGroup;
 			children = (
 				86416D4529005B18000EAAD6 /* Classes */,
-				86934F1228FF397A009ED690 /* fitnessApp.entitlements */,
 				86934F0F28FF37BB009ED690 /* Views */,
 				5C8D134E28FF35ED007251FD /* fitnessAppApp.swift */,
 				5C8D135028FF35ED007251FD /* ContentView.swift */,
+				86934F1228FF397A009ED690 /* fitnessApp.entitlements */,
 				5C8D135228FF35EF007251FD /* Assets.xcassets */,
 				5C8D135428FF35EF007251FD /* Preview Content */,
 			);
@@ -151,6 +153,7 @@
 			children = (
 				86934F1028FF37F6009ED690 /* DataView.swift */,
 				86416D4829007666000EAAD6 /* ProgressRingView.swift */,
+				86ADA58C2901B87300067988 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				86416D4929007666000EAAD6 /* ProgressRingView.swift in Sources */,
 				5C8D135128FF35ED007251FD /* ContentView.swift in Sources */,
 				86934F0E28FF37B3009ED690 /* HealthStore.swift in Sources */,
+				86ADA58D2901B87300067988 /* HomeView.swift in Sources */,
 				86934F1128FF37F6009ED690 /* DataView.swift in Sources */,
 				5C8D134F28FF35ED007251FD /* fitnessAppApp.swift in Sources */,
 			);

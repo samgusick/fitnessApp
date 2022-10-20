@@ -30,7 +30,7 @@ extension Color {
 struct ProgressRingView: View {
     
     @Binding var progress: CGFloat
-    var goal : CGFloat // add option for user input in settings / when creating account
+    var goal : CGFloat 
     var colors: [Color] = [Color.darkRed, Color.lightRed]
     
     
