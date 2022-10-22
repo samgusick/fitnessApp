@@ -27,6 +27,8 @@ extension Color {
     }
 }
 
+
+
 struct ProgressRingView: View {
     
     @Binding var progress: CGFloat

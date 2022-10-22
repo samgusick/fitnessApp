@@ -12,6 +12,7 @@ struct Step: Identifiable {
     let id = UUID()
     let count: Int
     let date: Date
+    let label : String
 }
 
 struct HomeView: View {
@@ -32,22 +33,24 @@ struct HomeView: View {
         switchWindowSteps = false
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.black]
     }
-
+    func formateDate(date: Date) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd"
+        return dateFormatter.string(from: date)
+    }
     private func updateSteps(_ statisticsCollection:  HKStatisticsCollection) {
-
         // Change value to get different number of days worth of steps
-        let startDate = Calendar.current.date(byAdding: .day, value: 0, to: Date())!
+        let startDate = Calendar.current.date(byAdding: .day, value: -6, to: Date())!
         let endDate = Date()
-
+        steps.removeAll()
         statisticsCollection.enumerateStatistics(from: startDate, to: endDate) { (stats, stop) in
 
             let count = stats.sumQuantity()?.doubleValue(for: .count())
-            let step = Step(count: Int(count ?? 0), date: stats.startDate)
+            let step = Step(count: Int(count ?? 0), date: stats.startDate, label: formateDate(date: stats.startDate))
             steps.append(step)
             stepCount = step.count
             progress = CGFloat( stepCount )
         }
-
     }
 
     private func updateAppearance(){
@@ -56,7 +59,6 @@ struct HomeView: View {
                 if success {
                     healthStore.calculateSteps { statisticsCollection in
                         if let statisticsCollection = statisticsCollection {
-                            // update the UI
                             updateSteps(statisticsCollection)
                         }
                     }
@@ -67,7 +69,7 @@ struct HomeView: View {
 
     var body: some View {
         if switchWindowSteps {
-            DataView(clicked: $switchWindowSteps)
+            DataView(clickedBack: $switchWindowSteps, title: " Weekly Steps", barColor: .darkRed, data: steps)
         }
         else{
             ZStack{
@@ -80,9 +82,6 @@ struct HomeView: View {
                             .foregroundColor(.black)
                         
                         HStack (alignment: .lastTextBaseline){
-                            //Text("Fitness App")
-                            //.font(.title)
-                            //.padding()
                             Text("Timer\n0:00")
                                 .fixedSize(horizontal: false, vertical: true)
                                 .foregroundColor(.black)
@@ -94,9 +93,6 @@ struct HomeView: View {
                                 .padding(35)
                                 .offset(y: -15)
                             Button {
-                                // random example functionality eventually going to take user to a new window
-//                                stepCount+=1
-//                                progress = CGFloat( stepCount )
                                 
                                 switchWindowSteps = true
                                 
