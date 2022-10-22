@@ -114,6 +114,7 @@ struct HomeView: View {
                             .position(x: 100, y: 90)
                             
                         }
+                        
 
                     }
                     .navigationBarTitle(Text("Fitness App"))
