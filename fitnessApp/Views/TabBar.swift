@@ -14,33 +14,31 @@ struct TabBar: View {
         case data
         case database
     }
-//    @Binding var clickedBack : Bool
+
     @State private var selected: Tab = .home
-//    var steps : [Step]
     
     var body: some View {
         TabView(selection: $selected) {
-            ContentView()
+            HomeView()
                 .tag(0)
                 .tabItem {
-                    Text("Content")
-                }
-            HomeView()
-                .tag(1)
-                .tabItem {
+                    Image(systemName: "house")
                     Text("Home")
                 }
-//            DataView(clickedBack: $clickedBack, title: " Weekly Steps", barColor: .darkRed, data: steps)
-//
-//                .tag(2)
-//                .tabItem {
-//                    Text("Data")
-//                }
-//            DatabaseView()
-//                .tag(3)
-//                .tabItem {
-//                    Text("Database")
-//                }
+            //DataView(clickedBack: $clickedBack, title: " Weekly Steps", barColor: .darkRed, data: steps)
+            //Bar(value: 3800, color: .blue)
+            CalendarView()
+                .tag(1)
+                .tabItem {
+                    Image(systemName: "calendar")
+                    Text("Calendar")
+                }
+            SettingsView()
+                .tag(2)
+                .tabItem {
+                    Image(systemName: "gear")
+                    Text("Settings")
+                }
         }
     }
 }

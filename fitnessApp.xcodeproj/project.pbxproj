@@ -18,6 +18,10 @@
 		86934F0E28FF37B3009ED690 /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86934F0D28FF37B3009ED690 /* HealthStore.swift */; };
 		86934F1128FF37F6009ED690 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86934F1028FF37F6009ED690 /* DataView.swift */; };
 		86AC4E4E2904A72900BD55E2 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AC4E4D2904A72900BD55E2 /* TabBar.swift */; };
+		86AC4E502906EA2000BD55E2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AC4E4F2906EA1F00BD55E2 /* SettingsView.swift */; };
+		86AC4E522906FB8900BD55E2 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AC4E512906FB8900BD55E2 /* CalendarView.swift */; };
+		86AC4E5629072AED00BD55E2 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AC4E5529072AED00BD55E2 /* TimerView.swift */; };
+		86AC4E5A29072BE300BD55E2 /* TimerKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AC4E5929072BE300BD55E2 /* TimerKit.swift */; };
 		86ADA58D2901B87300067988 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ADA58C2901B87300067988 /* HomeView.swift */; };
 		86ADA58F2901D8CB00067988 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ADA58E2901D8CB00067988 /* Bar.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +59,10 @@
 		86934F1028FF37F6009ED690 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
 		86934F1228FF397A009ED690 /* fitnessApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fitnessApp.entitlements; sourceTree = "<group>"; };
 		86AC4E4D2904A72900BD55E2 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		86AC4E4F2906EA1F00BD55E2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		86AC4E512906FB8900BD55E2 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		86AC4E5529072AED00BD55E2 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		86AC4E5929072BE300BD55E2 /* TimerKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerKit.swift; sourceTree = "<group>"; };
 		86ADA58C2901B87300067988 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		86ADA58E2901D8CB00067988 /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				86934F0D28FF37B3009ED690 /* HealthStore.swift */,
+				86AC4E5929072BE300BD55E2 /* TimerKit.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -160,6 +169,9 @@
 				86ADA58C2901B87300067988 /* HomeView.swift */,
 				86ADA58E2901D8CB00067988 /* Bar.swift */,
 				86AC4E4D2904A72900BD55E2 /* TabBar.swift */,
+				86AC4E4F2906EA1F00BD55E2 /* SettingsView.swift */,
+				86AC4E512906FB8900BD55E2 /* CalendarView.swift */,
+				86AC4E5529072AED00BD55E2 /* TimerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -301,10 +313,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86AC4E522906FB8900BD55E2 /* CalendarView.swift in Sources */,
 				86416D4929007666000EAAD6 /* ProgressRingView.swift in Sources */,
+				86AC4E5A29072BE300BD55E2 /* TimerKit.swift in Sources */,
 				86ADA58F2901D8CB00067988 /* Bar.swift in Sources */,
 				5C8D135128FF35ED007251FD /* ContentView.swift in Sources */,
+				86AC4E502906EA2000BD55E2 /* SettingsView.swift in Sources */,
 				86AC4E4E2904A72900BD55E2 /* TabBar.swift in Sources */,
+				86AC4E5629072AED00BD55E2 /* TimerView.swift in Sources */,
 				86934F0E28FF37B3009ED690 /* HealthStore.swift in Sources */,
 				86ADA58D2901B87300067988 /* HomeView.swift in Sources */,
 				86934F1128FF37F6009ED690 /* DataView.swift in Sources */,

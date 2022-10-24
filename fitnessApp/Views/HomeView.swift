@@ -8,6 +8,8 @@
 import SwiftUI
 import HealthKit
 
+// NOTE PUT BUTTONS INTO THEIR OWN VIEWS
+
 struct Step: Identifiable {
     let id = UUID()
     let count: Int
@@ -17,13 +19,13 @@ struct Step: Identifiable {
 
 struct HomeView: View {
     private var healthStore: HealthStore?
-    @State private var steps: [Step] = [Step]()
+    @State var steps: [Step] = [Step]()
     @State var stepCount: Int
     @State var progress : CGFloat
     private var goal: CGFloat // add option for user input in settings / when creating account
-    
     @State var switchWindowSteps : Bool
     
+    @ObservedObject var timer : TimerKit
     
     init() {
         healthStore = HealthStore()
@@ -32,6 +34,7 @@ struct HomeView: View {
         progress = 0.5
         switchWindowSteps = false
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.black]
+        timer = TimerKit()
     }
     func formateDate(date: Date) -> String{
         let dateFormatter = DateFormatter()
@@ -82,7 +85,7 @@ struct HomeView: View {
                             .foregroundColor(.black)
                         
                         HStack (alignment: .lastTextBaseline){
-                            Text("Timer\n0:00")
+                            Text("Calender\n")
                                 .fixedSize(horizontal: false, vertical: true)
                                 .foregroundColor(.black)
                                 .multilineTextAlignment(.center)
@@ -115,6 +118,66 @@ struct HomeView: View {
                             
                         }
                         
+                        
+                        
+                        
+                        
+                        
+                        
+                        ZStack{
+                            Text(String(format: "%.1f", timer.secondsElapsed))
+                                .fixedSize(horizontal: false, vertical: true)
+                                .frame(width: 350, height: 100)
+                                .multilineTextAlignment(.leading)
+                                .padding(0)
+                                .background(Rectangle().fill(Color(red: 0.671, green: 0.78, blue: 0.9))
+                                    .shadow(radius: 3)
+                                    .cornerRadius(10))
+                                .foregroundColor(.black)
+                                .offset(x: -40, y: -90)
+                            
+                            if timer.mode == .stopped {
+                                Button{
+                                    timer.start()
+                                } label: {
+                                    TimerView(label: "play.fill", buttonColor: .black)
+                                }.offset(x: -125, y: -90)
+                            }
+                            if timer.mode == .running {
+                                Button{
+                                    timer.pause()
+                                } label: {
+                                    TimerView(label: "pause.fill", buttonColor: .black)
+                                }.offset(x: -125, y: -90)
+                                Button{
+                                    timer.reset()
+                                } label: {
+                                    Image(systemName: "stop.fill")
+                                        .foregroundColor(.black)
+                                }.offset(x: -165, y: -90)
+                            }
+                            if timer.mode == .paused {
+                                Button{
+                                    timer.start()
+                                } label: {
+                                    TimerView(label: "play.fill", buttonColor: .black)
+                                }.offset(x: -125, y: -90)
+                                Button{
+                                    timer.reset()
+                                } label: {
+                                    Image(systemName: "gobackward")
+                                        .foregroundColor(.black)
+                                }.offset(x: -165, y: -90)
+                            }
+                            
+                            
+                        }
+                        
+                        
+                        
+                        
+                        
+                        
 
                     }
                     .navigationBarTitle(Text("Fitness App"))
@@ -127,7 +190,7 @@ struct HomeView: View {
                     updateAppearance()
                 }
                 ProgressRingView(progress : $progress, goal: goal)
-                    .offset(y: -50)
+                    .offset(y: -80)
             }
         }
     }
