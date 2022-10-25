@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct TabBar: View {
-    private enum Tab: Hashable {
-        case home
-        case content
-        case data
-        case database
-    }
+enum Tab: Hashable {
+    case home
+    case calendar
+    case workout
+    case settings
+}
 
+struct TabBar: View {
     @State private var selected: Tab = .home
     
     var body: some View {
@@ -26,15 +26,20 @@ struct TabBar: View {
                     Text("Home")
                 }
             //DataView(clickedBack: $clickedBack, title: " Weekly Steps", barColor: .darkRed, data: steps)
-            //Bar(value: 3800, color: .blue)
             CalendarView()
                 .tag(1)
                 .tabItem {
                     Image(systemName: "calendar")
                     Text("Calendar")
                 }
+            WorkoutsView()
+                .tag(3)
+                .tabItem {
+                    Image(systemName: "figure.walk")
+                    Text("Workouts")
+                }
             SettingsView()
-                .tag(2)
+                .tag(3)
                 .tabItem {
                     Image(systemName: "gear")
                     Text("Settings")
@@ -42,3 +47,4 @@ struct TabBar: View {
         }
     }
 }
+

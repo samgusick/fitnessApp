@@ -24,7 +24,6 @@ struct HomeView: View {
     @State var progress : CGFloat
     private var goal: CGFloat // add option for user input in settings / when creating account
     @State var switchWindowSteps : Bool
-    
     @ObservedObject var timer : TimerKit
     
     init() {
@@ -85,16 +84,19 @@ struct HomeView: View {
                             .foregroundColor(.black)
                         
                         HStack (alignment: .lastTextBaseline){
-                            Text("Calender\n")
-                                .fixedSize(horizontal: false, vertical: true)
-                                .foregroundColor(.black)
-                                .multilineTextAlignment(.center)
-                                .frame(width: 150, height: 150)
-                                .background(Rectangle().fill(Color(red: 0.671, green: 0.78, blue: 0.9))
-                                    .shadow(radius: 3)
-                                    .cornerRadius(10))
-                                .padding(35)
-                                .offset(y: -15)
+                            Button{
+                            } label: {
+                                Text("Calender\n")
+                                    .fixedSize(horizontal: false, vertical: true)
+                                    .foregroundColor(.black)
+                                    .multilineTextAlignment(.center)
+                                    .frame(width: 150, height: 150)
+                                    .background(Rectangle().fill(Color(red: 0.671, green: 0.78, blue: 0.9))
+                                        .shadow(radius: 3)
+                                        .cornerRadius(10))
+                            }
+                            .padding(35)
+                            .offset(y: -15)
                             Button {
                                 
                                 switchWindowSteps = true
@@ -117,15 +119,9 @@ struct HomeView: View {
                             .position(x: 100, y: 90)
                             
                         }
-                        
-                        
-                        
-                        
-                        
-                        
-                        
                         ZStack{
-                            Text(String(format: "%.1f", timer.secondsElapsed))
+                            Text(timer.label)
+                                .monospacedDigit()
                                 .fixedSize(horizontal: false, vertical: true)
                                 .frame(width: 350, height: 100)
                                 .multilineTextAlignment(.leading)
@@ -170,15 +166,10 @@ struct HomeView: View {
                                 }.offset(x: -165, y: -90)
                             }
                             
+                            Image(systemName: "stopwatch").offset(x: 45, y: -90)
+                                .foregroundColor(.black)
                             
                         }
-                        
-                        
-                        
-                        
-                        
-                        
-
                     }
                     .navigationBarTitle(Text("Fitness App"))
                     .navigationBarItems(leading: Image(systemName: "figure.walk").foregroundColor(.black))//systemName: "figure.run")) not available ios 15

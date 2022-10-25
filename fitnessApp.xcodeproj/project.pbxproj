@@ -14,6 +14,7 @@
 		5C8D136028FF35EF007251FD /* fitnessAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D135F28FF35EF007251FD /* fitnessAppTests.swift */; };
 		5C8D136A28FF35EF007251FD /* fitnessAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D136928FF35EF007251FD /* fitnessAppUITests.swift */; };
 		5C8D136C28FF35EF007251FD /* fitnessAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D136B28FF35EF007251FD /* fitnessAppUITestsLaunchTests.swift */; };
+		8605DDCA29082C950025A8BF /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8605DDC929082C950025A8BF /* WorkoutsView.swift */; };
 		86416D4929007666000EAAD6 /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86416D4829007666000EAAD6 /* ProgressRingView.swift */; };
 		86934F0E28FF37B3009ED690 /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86934F0D28FF37B3009ED690 /* HealthStore.swift */; };
 		86934F1128FF37F6009ED690 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86934F1028FF37F6009ED690 /* DataView.swift */; };
@@ -54,6 +55,7 @@
 		5C8D136528FF35EF007251FD /* fitnessAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fitnessAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C8D136928FF35EF007251FD /* fitnessAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fitnessAppUITests.swift; sourceTree = "<group>"; };
 		5C8D136B28FF35EF007251FD /* fitnessAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fitnessAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8605DDC929082C950025A8BF /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
 		86416D4829007666000EAAD6 /* ProgressRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
 		86934F0D28FF37B3009ED690 /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
 		86934F1028FF37F6009ED690 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				86AC4E4F2906EA1F00BD55E2 /* SettingsView.swift */,
 				86AC4E512906FB8900BD55E2 /* CalendarView.swift */,
 				86AC4E5529072AED00BD55E2 /* TimerView.swift */,
+				8605DDC929082C950025A8BF /* WorkoutsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				86AC4E4E2904A72900BD55E2 /* TabBar.swift in Sources */,
 				86AC4E5629072AED00BD55E2 /* TimerView.swift in Sources */,
 				86934F0E28FF37B3009ED690 /* HealthStore.swift in Sources */,
+				8605DDCA29082C950025A8BF /* WorkoutsView.swift in Sources */,
 				86ADA58D2901B87300067988 /* HomeView.swift in Sources */,
 				86934F1128FF37F6009ED690 /* DataView.swift in Sources */,
 				5C8D134F28FF35ED007251FD /* fitnessAppApp.swift in Sources */,
