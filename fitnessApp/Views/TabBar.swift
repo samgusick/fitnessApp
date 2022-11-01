@@ -33,7 +33,7 @@ struct TabBar: View {
                     Text("Calendar")
                 }
             WorkoutsView()
-                .tag(3)
+                .tag(2)
                 .tabItem {
                     Image(systemName: "figure.walk")
                     Text("Workouts")
