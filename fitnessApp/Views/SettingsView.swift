@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @State var str : String = ""
     var body: some View {
         
         NavigationView {
             VStack{
+                TextField("Username: ", text: $str).background(Rectangle().fill(.white))
             }
             .navigationBarTitle(Text("Settings"))
             .navigationBarItems(leading: Image(systemName: "gear").foregroundColor(.black))//systemName: "figure.run")) not available ios 15

@@ -35,11 +35,13 @@ struct HomeView: View {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.black]
         timer = TimerKit()
     }
+    
     func formateDate(date: Date) -> String{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd"
         return dateFormatter.string(from: date)
     }
+    
     private func updateSteps(_ statisticsCollection:  HKStatisticsCollection) {
         // Change value to get different number of days worth of steps
         let startDate = Calendar.current.date(byAdding: .day, value: -6, to: Date())!
@@ -84,27 +86,31 @@ struct HomeView: View {
                             .foregroundColor(.black)
                         
                         HStack (alignment: .lastTextBaseline){
-                            Button{
+                            Button {
                             } label: {
                                 Text("Calender\n")
                                     .fixedSize(horizontal: false, vertical: true)
                                     .foregroundColor(.black)
                                     .multilineTextAlignment(.center)
                                     .frame(width: 150, height: 150)
+                                    //.frame(width : UIScreen.main.bounds.width / 3, height : UIScreen.main.bounds.height / 6  )
                                     .background(Rectangle().fill(Color(red: 0.671, green: 0.78, blue: 0.9))
                                         .shadow(radius: 3)
                                         .cornerRadius(10))
                             }
-                            .padding(35)
-                            .offset(y: -15)
+                            .position(x : UIScreen.main.bounds.width / 4, y: UIScreen.main.bounds.height / 10 )
+                            .padding(15)
+                            //.offset(y: -15)
+                            
+                            
                             Button {
-                                
                                 switchWindowSteps = true
                                 
                             } label: {
                                 Text( "\(stepCount)\nSteps")
                                     .fixedSize(horizontal: false, vertical: true)
                                     .frame(width: 150, height: 150)
+                                    //.frame(width : UIScreen.main.bounds.width / 3, height : UIScreen.main.bounds.height / 6  )
                                     .multilineTextAlignment(.leading)
                                     .padding(0)
                                     .background(Rectangle().fill(Color(red: 0.671, green: 0.78, blue: 0.9))
@@ -115,10 +121,16 @@ struct HomeView: View {
                                 Image(systemName: "figure.walk.circle").offset(x: -50, y: -50).foregroundColor(.darkRed)
                                 
                             }
-                            .offset(y: -15)
-                            .position(x: 100, y: 90)
+                            //.offset(y: -15)
+                            //.position(x: 100, y: 90)
+                            .position(x : UIScreen.main.bounds.width / 4, y: UIScreen.main.bounds.height / 10 )
+                            
+                            .contextMenu{
+                                Text("\(stepCount) Steps")
+                            }
                             
                         }
+                        .padding(10)
                         ZStack{
                             Text(timer.label)
                                 .monospacedDigit()
@@ -182,6 +194,7 @@ struct HomeView: View {
                 }
                 ProgressRingView(progress : $progress, goal: goal)
                     .offset(y: -80)
+                    //.scaleEffect(x: 0.9, y: 0.9)
             }
         }
     }
