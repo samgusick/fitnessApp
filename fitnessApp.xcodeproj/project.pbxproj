@@ -16,6 +16,9 @@
 		5C8D136C28FF35EF007251FD /* fitnessAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D136B28FF35EF007251FD /* fitnessAppUITestsLaunchTests.swift */; };
 		8605DDCA29082C950025A8BF /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8605DDC929082C950025A8BF /* WorkoutsView.swift */; };
 		86416D4929007666000EAAD6 /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86416D4829007666000EAAD6 /* ProgressRingView.swift */; };
+		864E7BA12922FB0100021BB9 /* TimerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864E7BA02922FB0100021BB9 /* TimerButtonView.swift */; };
+		864E7BA529240C6800021BB9 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864E7BA429240C6800021BB9 /* SwiftUIView.swift */; };
+		864E7BA729240C9200021BB9 /* WorkoutButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864E7BA629240C9200021BB9 /* WorkoutButtonView.swift */; };
 		86934F0E28FF37B3009ED690 /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86934F0D28FF37B3009ED690 /* HealthStore.swift */; };
 		86934F1128FF37F6009ED690 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86934F1028FF37F6009ED690 /* DataView.swift */; };
 		86AC4E4E2904A72900BD55E2 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AC4E4D2904A72900BD55E2 /* TabBar.swift */; };
@@ -57,6 +60,9 @@
 		5C8D136B28FF35EF007251FD /* fitnessAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fitnessAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8605DDC929082C950025A8BF /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
 		86416D4829007666000EAAD6 /* ProgressRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
+		864E7BA02922FB0100021BB9 /* TimerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButtonView.swift; sourceTree = "<group>"; };
+		864E7BA429240C6800021BB9 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		864E7BA629240C9200021BB9 /* WorkoutButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutButtonView.swift; sourceTree = "<group>"; };
 		86934F0D28FF37B3009ED690 /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
 		86934F1028FF37F6009ED690 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
 		86934F1228FF397A009ED690 /* fitnessApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fitnessApp.entitlements; sourceTree = "<group>"; };
@@ -175,6 +181,9 @@
 				86AC4E512906FB8900BD55E2 /* CalendarView.swift */,
 				86AC4E5529072AED00BD55E2 /* TimerView.swift */,
 				8605DDC929082C950025A8BF /* WorkoutsView.swift */,
+				864E7BA02922FB0100021BB9 /* TimerButtonView.swift */,
+				864E7BA429240C6800021BB9 /* SwiftUIView.swift */,
+				864E7BA629240C9200021BB9 /* WorkoutButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -318,14 +327,17 @@
 			files = (
 				86AC4E522906FB8900BD55E2 /* CalendarView.swift in Sources */,
 				86416D4929007666000EAAD6 /* ProgressRingView.swift in Sources */,
+				864E7BA529240C6800021BB9 /* SwiftUIView.swift in Sources */,
 				86AC4E5A29072BE300BD55E2 /* TimerKit.swift in Sources */,
 				86ADA58F2901D8CB00067988 /* Bar.swift in Sources */,
+				864E7BA12922FB0100021BB9 /* TimerButtonView.swift in Sources */,
 				5C8D135128FF35ED007251FD /* ContentView.swift in Sources */,
 				86AC4E502906EA2000BD55E2 /* SettingsView.swift in Sources */,
 				86AC4E4E2904A72900BD55E2 /* TabBar.swift in Sources */,
 				86AC4E5629072AED00BD55E2 /* TimerView.swift in Sources */,
 				86934F0E28FF37B3009ED690 /* HealthStore.swift in Sources */,
 				8605DDCA29082C950025A8BF /* WorkoutsView.swift in Sources */,
+				864E7BA729240C9200021BB9 /* WorkoutButtonView.swift in Sources */,
 				86ADA58D2901B87300067988 /* HomeView.swift in Sources */,
 				86934F1128FF37F6009ED690 /* DataView.swift in Sources */,
 				5C8D134F28FF35ED007251FD /* fitnessAppApp.swift in Sources */,

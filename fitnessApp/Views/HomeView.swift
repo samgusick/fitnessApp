@@ -25,6 +25,7 @@ struct HomeView: View {
     private var goal: CGFloat // add option for user input in settings / when creating account
     @State var switchWindowSteps : Bool
     @ObservedObject var timer : TimerKit
+    @State var calorieCount: Int
     
     init() {
         healthStore = HealthStore()
@@ -34,6 +35,7 @@ struct HomeView: View {
         switchWindowSteps = false
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.black]
         timer = TimerKit()
+        calorieCount = 0
     }
     
     func formateDate(date: Date) -> String{
@@ -78,110 +80,58 @@ struct HomeView: View {
         else{
             ZStack{
                 NavigationView{
-                    VStack (alignment: .trailing) {
-                        
+                    VStack {
                         Text(Date(), style: .date)
-                            .padding(10)
-                            .offset(y: 20)
                             .foregroundColor(.black)
-                        
-                        HStack (alignment: .lastTextBaseline){
+                            .padding([.leading], 100)
+                    
+                        HStack {
+                            
                             Button {
+                                calorieCount+=100
                             } label: {
-                                Text("Calender\n")
+                                Text("Calories\n\(calorieCount)")
                                     .fixedSize(horizontal: false, vertical: true)
                                     .foregroundColor(.black)
                                     .multilineTextAlignment(.center)
                                     .frame(width: 150, height: 150)
-                                    //.frame(width : UIScreen.main.bounds.width / 3, height : UIScreen.main.bounds.height / 6  )
                                     .background(Rectangle().fill(Color(red: 0.671, green: 0.78, blue: 0.9))
-                                        .shadow(radius: 3)
                                         .cornerRadius(10))
+                                Button{
+                                    calorieCount = 0
+                                }
+                                label: {
+                                    Image(systemName: "gobackward")
+                                        .foregroundColor(.black)
+                                }
+                                .offset(x: -50, y: 50)
                             }
-                            .position(x : UIScreen.main.bounds.width / 4, y: UIScreen.main.bounds.height / 10 )
-                            .padding(15)
-                            //.offset(y: -15)
-                            
-                            
+                                
                             Button {
                                 switchWindowSteps = true
-                                
+
                             } label: {
                                 Text( "\(stepCount)\nSteps")
                                     .fixedSize(horizontal: false, vertical: true)
                                     .frame(width: 150, height: 150)
-                                    //.frame(width : UIScreen.main.bounds.width / 3, height : UIScreen.main.bounds.height / 6  )
                                     .multilineTextAlignment(.leading)
-                                    .padding(0)
                                     .background(Rectangle().fill(Color(red: 0.671, green: 0.78, blue: 0.9))
-                                        .shadow(radius: 3)
                                         .cornerRadius(10))
-                                
+
                                     .foregroundColor(.darkRed)
                                 Image(systemName: "figure.walk.circle").offset(x: -50, y: -50).foregroundColor(.darkRed)
-                                
+
                             }
-                            //.offset(y: -15)
-                            //.position(x: 100, y: 90)
-                            .position(x : UIScreen.main.bounds.width / 4, y: UIScreen.main.bounds.height / 10 )
-                            
-                            .contextMenu{
-                                Text("\(stepCount) Steps")
-                            }
-                            
+                        
                         }
-                        .padding(10)
-                        ZStack{
-                            Text(timer.label)
-                                .monospacedDigit()
-                                .fixedSize(horizontal: false, vertical: true)
-                                .frame(width: 350, height: 100)
-                                .multilineTextAlignment(.leading)
-                                .padding(0)
-                                .background(Rectangle().fill(Color(red: 0.671, green: 0.78, blue: 0.9))
-                                    .shadow(radius: 3)
-                                    .cornerRadius(10))
-                                .foregroundColor(.black)
-                                .offset(x: -40, y: -90)
-                            
-                            if timer.mode == .stopped {
-                                Button{
-                                    timer.start()
-                                } label: {
-                                    TimerView(label: "play.fill", buttonColor: .black)
-                                }.offset(x: -125, y: -90)
-                            }
-                            if timer.mode == .running {
-                                Button{
-                                    timer.pause()
-                                } label: {
-                                    TimerView(label: "pause.fill", buttonColor: .black)
-                                }.offset(x: -125, y: -90)
-                                Button{
-                                    timer.reset()
-                                } label: {
-                                    Image(systemName: "stop.fill")
-                                        .foregroundColor(.black)
-                                }.offset(x: -165, y: -90)
-                            }
-                            if timer.mode == .paused {
-                                Button{
-                                    timer.start()
-                                } label: {
-                                    TimerView(label: "play.fill", buttonColor: .black)
-                                }.offset(x: -125, y: -90)
-                                Button{
-                                    timer.reset()
-                                } label: {
-                                    Image(systemName: "gobackward")
-                                        .foregroundColor(.black)
-                                }.offset(x: -165, y: -90)
-                            }
-                            
-                            Image(systemName: "stopwatch").offset(x: 45, y: -90)
-                                .foregroundColor(.black)
-                            
-                        }
+                        .padding([.leading], 40)
+
+                        ProgressRingView(progress: $progress, goal: goal)
+                            .padding([.top], 20)
+                           
+                        TimerButtonView()
+                            .padding([.top], 15)
+                        
                     }
                     .navigationBarTitle(Text("Fitness App"))
                     .navigationBarItems(leading: Image(systemName: "figure.walk").foregroundColor(.black))//systemName: "figure.run")) not available ios 15
@@ -192,9 +142,7 @@ struct HomeView: View {
                 .onAppear {
                     updateAppearance()
                 }
-                ProgressRingView(progress : $progress, goal: goal)
-                    .offset(y: -80)
-                    //.scaleEffect(x: 0.9, y: 0.9)
+               
             }
         }
     }
