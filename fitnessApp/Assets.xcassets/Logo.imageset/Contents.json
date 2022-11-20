@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "LogoLightMode.png",
+      "filename" : "samsFace.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,7 +12,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "LogoDarkMode.png",
+      "filename" : "samsFace 1.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
