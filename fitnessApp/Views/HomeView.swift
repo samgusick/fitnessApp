@@ -7,6 +7,7 @@
 
 import SwiftUI
 import HealthKit
+import Firebase
 
 // NOTE PUT BUTTONS INTO THEIR OWN VIEWS
 
@@ -18,6 +19,9 @@ struct Step: Identifiable {
 }
 
 struct HomeView: View {
+    
+    @EnvironmentObject var viewRouter: ViewRouter
+
     private var healthStore: HealthStore?
     @State var steps: [Step] = [Step]()
     @State var stepCount: Int
@@ -37,6 +41,7 @@ struct HomeView: View {
         timer = TimerKit()
         calorieCount = 0
     }
+    
     
     func formateDate(date: Date) -> String{
         let dateFormatter = DateFormatter()

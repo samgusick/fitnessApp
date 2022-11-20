@@ -6,12 +6,21 @@
 //
 
 import SwiftUI
+import Firebase
+
 
 @main
 struct fitnessAppApp: App {
+    
+    @StateObject var viewRouter = ViewRouter()
+        
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MotherView().environmentObject(viewRouter)
         }
     }
 }
