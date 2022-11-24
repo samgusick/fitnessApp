@@ -34,6 +34,17 @@ struct SettingsView: View {
                         settings.changeColor(accent: Color(red: 0.671, green: 0.9, blue: 0.78), background: Color(red: 0.4, green: 0.8, blue: 0.6))
                         
                     })
+                }
+            
+            label: {
+                Text("Background Color")
+                    .foregroundColor(.black)
+                    .frame(width: 300, height: 100)
+                    .background(Rectangle().fill(settings.accentColor)
+                        .cornerRadius(10))
+            }
+                Button{
+                    signOutUser()
                 } label: {
                     Text("Sign Out")
                         .foregroundColor(.black)
