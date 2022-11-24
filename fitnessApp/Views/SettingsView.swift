@@ -4,7 +4,7 @@
 //
 //  Created by Liam Hackett on 10/24/22.
 //
-
+import Foundation
 import SwiftUI
 import Firebase
 
@@ -13,13 +13,27 @@ struct SettingsView: View {
     @EnvironmentObject var viewRouter: ViewRouter
     
     @State var str : String = ""
+    @ObservedObject var settings: Settings = Settings()
     var body: some View {
         
         NavigationView {
             VStack{
-                TextField("Username: ", text: $str).background(Rectangle().fill(.white))
-                Button{
-                    signOutUser()
+                TextField("Username: ", text: $str)
+                    .frame(width:300)
+                    .background(Rectangle().fill(settings.accentColor))
+                Menu {
+                    Button("Blue", action: {
+                        settings.changeColor(accent: Color(red: 0.671, green: 0.78, blue: 0.9), background: Color(red: 0.4, green: 0.6, blue: 0.8))
+                        
+                    });
+                    Button("Pink", action: {
+                        settings.changeColor(accent: Color(red: 0.9, green: 0.671, blue: 0.78), background: Color(red: 0.8, green: 0.4, blue: 0.6))
+                        
+                    })
+                    Button("Green", action: {
+                        settings.changeColor(accent: Color(red: 0.671, green: 0.9, blue: 0.78), background: Color(red: 0.4, green: 0.8, blue: 0.6))
+                        
+                    })
                 } label: {
                     Text("Sign Out")
                         .foregroundColor(.black)
