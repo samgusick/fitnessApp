@@ -53,6 +53,8 @@ struct SignInView: View {
                 .opacity(0.9)
         }
             .padding()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color(red: 0.4, green: 0.6, blue: 0.8).edgesIgnoringSafeArea(.all))
     }
     
     func signInUser(userEmail: String, userPassword: String) {

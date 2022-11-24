@@ -18,6 +18,15 @@ struct SettingsView: View {
         NavigationView {
             VStack{
                 TextField("Username: ", text: $str).background(Rectangle().fill(.white))
+                Button{
+                    signOutUser()
+                } label: {
+                    Text("Sign Out")
+                        .foregroundColor(.black)
+                        .frame(width: 150, height: 50)
+                        .background(Rectangle().fill(Color(red: 0.671, green: 0.78, blue: 0.9)).cornerRadius(15))
+                        .padding(10)
+                }
             }
             .navigationBarTitle(Text("Settings"))
             .navigationBarItems(leading: Image(systemName: "gear").foregroundColor(.black))//systemName: "figure.run")) not available ios 15

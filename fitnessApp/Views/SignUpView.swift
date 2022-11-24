@@ -52,6 +52,8 @@ struct SignUpView: View {
                 .opacity(0.9)
         }
             .padding()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color(red: 0.4, green: 0.6, blue: 0.8).edgesIgnoringSafeArea(.all))
     }
     
     func signUpUser(userEmail: String, userPassword: String) {
@@ -88,7 +90,7 @@ struct SignUpView_Previews: PreviewProvider {
 
 struct LogoView: View {
     var body: some View {
-        Image("Logo")
+        Image(systemName: "figure.walk.circle.fill")//"Logo")
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: 300, height: 150)
