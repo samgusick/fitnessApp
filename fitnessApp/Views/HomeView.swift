@@ -9,7 +9,6 @@ import SwiftUI
 import HealthKit
 import Firebase
 
-// NOTE PUT BUTTONS INTO THEIR OWN VIEWS
 
 struct Step: Identifiable {
     let id = UUID()

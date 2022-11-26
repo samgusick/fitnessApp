@@ -12,8 +12,6 @@ import Foundation
 
 struct ContentView: View {
     var body: some View {
-        //HomeView()
-        //TabBar()
         MotherView().environmentObject(ViewRouter())
     }
 }
