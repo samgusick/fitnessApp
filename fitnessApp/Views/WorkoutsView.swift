@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct WorkoutsView: View {
+    @ObservedObject var settings: Settings
+    
     var body: some View {
         NavigationView {
             VStack{
@@ -23,6 +25,6 @@ struct WorkoutsView: View {
 
 struct WorkoutsView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkoutsView()
+        WorkoutsView(settings: Settings())
     }
 }

@@ -13,16 +13,13 @@ struct SettingsView: View {
     @EnvironmentObject var viewRouter: ViewRouter
     
     @State var str : String = ""
-    @ObservedObject var settings: Settings = Settings()
+    @ObservedObject var settings: Settings
     var body: some View {
         
         NavigationView {
             VStack{
-                TextField("Username: ", text: $str)
-                    .frame(width:300)
-                    .background(Rectangle().fill(settings.accentColor))
                 Menu {
-                    Button("Blue", action: {
+                    Button("Blue (Default)", action: {
                         settings.changeColor(accent: Color(red: 0.671, green: 0.78, blue: 0.9), background: Color(red: 0.4, green: 0.6, blue: 0.8))
                         
                     });
@@ -34,9 +31,7 @@ struct SettingsView: View {
                         settings.changeColor(accent: Color(red: 0.671, green: 0.9, blue: 0.78), background: Color(red: 0.4, green: 0.8, blue: 0.6))
                         
                     })
-                }
-            
-            label: {
+                } label: {
                 Text("Background Color")
                     .foregroundColor(.black)
                     .frame(width: 300, height: 100)
@@ -89,6 +84,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView(settings: Settings())
     }
 }

@@ -9,16 +9,8 @@ import SwiftUI
 
 struct CalendarView: View {
     @State private var date = Date()
-    
-    @State var sunday : String = "Off Day"
-    @State var monday : String = "Push Day"
-    @State var tuesday : String = "Pull Day"
-    @State var wednesday : String = "Leg Day"
-    @State var thursday : String = "Push Day"
-    @State var friday : String = "Pull Day"
-    @State var saturday : String = "Off Day"
-    
     @State var switchWindows : Bool = false
+    @ObservedObject var settings: Settings
     
     var body: some View {
        
@@ -29,14 +21,14 @@ struct CalendarView: View {
                 DatePicker("", selection: $date, displayedComponents: .date)
                     .datePickerStyle(GraphicalDatePickerStyle())
                     .colorScheme(.light)
-                    .background(Rectangle().fill(Color(red: 0.671, green: 0.78, blue: 0.9)).cornerRadius(15))
+                    .background(Rectangle().fill(settings.accentColor).cornerRadius(15))
                     .padding(10)
                 
                 if Calendar.current.component(.weekday, from: date) == 1 { // Sunday
                     Button{
                         
                     } label:{
-                        WorkoutButtonView(label: sunday)
+                        WorkoutButtonView(label: settings.sunday, settings: settings)
                     }
                     
                 }
@@ -44,7 +36,7 @@ struct CalendarView: View {
                     Button{
                        
                     } label:{
-                        WorkoutButtonView(label: monday)
+                        WorkoutButtonView(label: settings.monday, settings: settings)
                     }
                     
                 }
@@ -52,7 +44,7 @@ struct CalendarView: View {
                     Button{
                         
                     } label:{
-                        WorkoutButtonView(label: tuesday)
+                        WorkoutButtonView(label: settings.tuesday, settings: settings)
                     }
                     
                 }
@@ -60,7 +52,7 @@ struct CalendarView: View {
                     Button{
                         
                     } label:{
-                        WorkoutButtonView(label: wednesday)
+                        WorkoutButtonView(label: settings.wednesday, settings: settings)
                     }
                     
                 }
@@ -68,7 +60,7 @@ struct CalendarView: View {
                     Button{
                         
                     } label:{
-                        WorkoutButtonView(label: thursday)
+                        WorkoutButtonView(label: settings.thursday, settings: settings)
                     }
                     
                 }
@@ -76,7 +68,7 @@ struct CalendarView: View {
                     Button{
                        
                     } label:{
-                        WorkoutButtonView(label: friday)
+                        WorkoutButtonView(label: settings.friday,settings: settings)
                     }
                     
                 }
@@ -84,7 +76,7 @@ struct CalendarView: View {
                     Button{
                        
                     } label:{
-                        WorkoutButtonView(label: saturday)
+                        WorkoutButtonView(label: settings.saturday, settings: settings)
                     }
                     
                 }
@@ -105,6 +97,6 @@ struct CalendarView: View {
 
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarView()
+        CalendarView(settings: Settings())
     }
 }

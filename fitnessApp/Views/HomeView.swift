@@ -25,12 +25,13 @@ struct HomeView: View {
     @State var steps: [Step] = [Step]()
     @State var stepCount: Int
     @State var progress : CGFloat
-    private var goal: CGFloat // add option for user input in settings / when creating account
+    var goal: CGFloat // add option for user input in settings / when creating account
     @State var switchWindowSteps : Bool
     @ObservedObject var timer : TimerKit
     @State var calorieCount: Int
+    @ObservedObject var settings: Settings //= Settings()
     
-    init() {
+    init(settings : Settings) {
         healthStore = HealthStore()
         stepCount = 1
         goal = 5000
@@ -39,6 +40,8 @@ struct HomeView: View {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.black]
         timer = TimerKit()
         calorieCount = 0
+        self.settings = settings
+        goal = self.settings.goal
     }
     
     
@@ -79,7 +82,7 @@ struct HomeView: View {
 
     var body: some View {
         if switchWindowSteps {
-            DataView(clickedBack: $switchWindowSteps, title: " Weekly Steps", barColor: .darkRed, data: steps)
+            DataView(clickedBack: $switchWindowSteps, title: " Weekly Steps", barColor: .darkRed, data: steps, settings: settings)
         }
         else{
             ZStack{
@@ -99,7 +102,7 @@ struct HomeView: View {
                                     .foregroundColor(.black)
                                     .multilineTextAlignment(.center)
                                     .frame(width: 150, height: 150)
-                                    .background(Rectangle().fill(Color(red: 0.671, green: 0.78, blue: 0.9))
+                                    .background(Rectangle().fill(settings.accentColor)
                                         .cornerRadius(10))
                                 Button{
                                     calorieCount = 0
@@ -119,7 +122,7 @@ struct HomeView: View {
                                     .fixedSize(horizontal: false, vertical: true)
                                     .frame(width: 150, height: 150)
                                     .multilineTextAlignment(.leading)
-                                    .background(Rectangle().fill(Color(red: 0.671, green: 0.78, blue: 0.9))
+                                    .background(Rectangle().fill(settings.accentColor)
                                         .cornerRadius(10))
 
                                     .foregroundColor(.darkRed)
@@ -133,7 +136,7 @@ struct HomeView: View {
                         ProgressRingView(progress: $progress, goal: goal)
                             .padding([.top], 20)
                            
-                        TimerButtonView()
+                        TimerButtonView(accentColor: $settings.accentColor)
                             .padding([.top], 15)
                         
                     }
@@ -154,6 +157,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(settings: Settings())
     }
 }

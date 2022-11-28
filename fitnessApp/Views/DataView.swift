@@ -16,7 +16,7 @@ struct DataView: View {
     @State private var currentValue = ""
     @State private var currentLabel = ""
     @State private var touchCoords: CGFloat = -1
-    
+    @ObservedObject var settings: Settings
     
     func normalizedValue(index: Int) -> Double {
         var allValues: [Double]    {
@@ -139,7 +139,7 @@ struct DataView: View {
             .background(Color(red: 0.4, green: 0.6, blue: 0.8).edgesIgnoringSafeArea(.all))
         }
         else{
-            HomeView()
+            HomeView(settings: settings)
         }
     }
 }

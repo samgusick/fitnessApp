@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TimerButtonView: View {
     @ObservedObject var timer : TimerKit = TimerKit()
+    @Binding var accentColor : Color
     var body: some View {
         ZStack{
             Text(timer.label)
@@ -17,7 +18,7 @@ struct TimerButtonView: View {
                 .frame(width: 350, height: 100)
                 .multilineTextAlignment(.leading)
                 .padding(5)
-                .background(Rectangle().fill(Color(red: 0.671, green: 0.78, blue: 0.9))
+                .background(Rectangle().fill(accentColor)
                     .shadow(radius: 3)
                     .cornerRadius(10))
                 .foregroundColor(.black)
@@ -64,8 +65,8 @@ struct TimerButtonView: View {
     }
 }
 
-struct TimerButtonView_Previews: PreviewProvider {
-    static var previews: some View {
-        TimerButtonView()
-    }
-}
+//struct TimerButtonView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TimerButtonView()
+//    }
+//}
