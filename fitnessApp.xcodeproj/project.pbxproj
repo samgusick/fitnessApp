@@ -18,8 +18,6 @@
 		5C8F56CD292995AA0024E023 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C8F56CB292995A90024E023 /* GoogleService-Info.plist */; };
 		5C8F56CE292995AA0024E023 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C8F56CB292995A90024E023 /* GoogleService-Info.plist */; };
 		5C8F56D1292998560024E023 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5C8F56D0292998560024E023 /* FirebaseAuth */; };
-		5C8F56E029299AC10024E023 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F56D829299AC10024E023 /* SwiftUIView.swift */; };
-		5C8F56E129299AC10024E023 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F56D829299AC10024E023 /* SwiftUIView.swift */; };
 		5C8F56E529299B5A0024E023 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F56E229299B5A0024E023 /* SignInView.swift */; };
 		5C8F56E629299B5A0024E023 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F56E229299B5A0024E023 /* SignInView.swift */; };
 		5C8F56E729299B5A0024E023 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F56E229299B5A0024E023 /* SignInView.swift */; };
@@ -36,7 +34,6 @@
 		86416D4929007666000EAAD6 /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86416D4829007666000EAAD6 /* ProgressRingView.swift */; };
 		86424451292FE5090067EBA2 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86424450292FE5090067EBA2 /* Settings.swift */; };
 		864E7BA12922FB0100021BB9 /* TimerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864E7BA02922FB0100021BB9 /* TimerButtonView.swift */; };
-		864E7BA529240C6800021BB9 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864E7BA429240C6800021BB9 /* SwiftUIView.swift */; };
 		864E7BA729240C9200021BB9 /* WorkoutButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864E7BA629240C9200021BB9 /* WorkoutButtonView.swift */; };
 		86934F0E28FF37B3009ED690 /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86934F0D28FF37B3009ED690 /* HealthStore.swift */; };
 		86934F1128FF37F6009ED690 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86934F1028FF37F6009ED690 /* DataView.swift */; };
@@ -78,7 +75,6 @@
 		5C8D136928FF35EF007251FD /* fitnessAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fitnessAppUITests.swift; sourceTree = "<group>"; };
 		5C8D136B28FF35EF007251FD /* fitnessAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fitnessAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5C8F56CB292995A90024E023 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		5C8F56D829299AC10024E023 /* SwiftUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		5C8F56E229299B5A0024E023 /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		5C8F56E329299B5A0024E023 /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		5C8F56E429299B5A0024E023 /* MotherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
@@ -87,7 +83,6 @@
 		86416D4829007666000EAAD6 /* ProgressRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
 		86424450292FE5090067EBA2 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		864E7BA02922FB0100021BB9 /* TimerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButtonView.swift; sourceTree = "<group>"; };
-		864E7BA429240C6800021BB9 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		864E7BA629240C9200021BB9 /* WorkoutButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutButtonView.swift; sourceTree = "<group>"; };
 		86934F0D28FF37B3009ED690 /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
 		86934F1028FF37F6009ED690 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
@@ -204,7 +199,6 @@
 				5C8F56E429299B5A0024E023 /* MotherView.swift */,
 				5C8F56E229299B5A0024E023 /* SignInView.swift */,
 				5C8F56E329299B5A0024E023 /* SignUpView.swift */,
-				5C8F56D829299AC10024E023 /* SwiftUIView.swift */,
 				86934F1028FF37F6009ED690 /* DataView.swift */,
 				86416D4829007666000EAAD6 /* ProgressRingView.swift */,
 				86ADA58C2901B87300067988 /* HomeView.swift */,
@@ -215,7 +209,6 @@
 				86AC4E5529072AED00BD55E2 /* TimerView.swift */,
 				8605DDC929082C950025A8BF /* WorkoutsView.swift */,
 				864E7BA02922FB0100021BB9 /* TimerButtonView.swift */,
-				864E7BA429240C6800021BB9 /* SwiftUIView.swift */,
 				864E7BA629240C9200021BB9 /* WorkoutButtonView.swift */,
 			);
 			path = Views;
@@ -363,7 +356,6 @@
 				86AC4E522906FB8900BD55E2 /* CalendarView.swift in Sources */,
 				5C8F56EB29299B5A0024E023 /* MotherView.swift in Sources */,
 				86416D4929007666000EAAD6 /* ProgressRingView.swift in Sources */,
-				864E7BA529240C6800021BB9 /* SwiftUIView.swift in Sources */,
 				86AC4E5A29072BE300BD55E2 /* TimerKit.swift in Sources */,
 				86ADA58F2901D8CB00067988 /* Bar.swift in Sources */,
 				864E7BA12922FB0100021BB9 /* TimerButtonView.swift in Sources */,
@@ -393,7 +385,6 @@
 				5C8F56E929299B5A0024E023 /* SignUpView.swift in Sources */,
 				5C8F56F029299B730024E023 /* ViewRouter.swift in Sources */,
 				5C8F56E629299B5A0024E023 /* SignInView.swift in Sources */,
-				5C8F56E029299AC10024E023 /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,7 +394,6 @@
 			files = (
 				5C8F56ED29299B5A0024E023 /* MotherView.swift in Sources */,
 				5C8F56F129299B730024E023 /* ViewRouter.swift in Sources */,
-				5C8F56E129299AC10024E023 /* SwiftUIView.swift in Sources */,
 				5C8D136A28FF35EF007251FD /* fitnessAppUITests.swift in Sources */,
 				5C8D136C28FF35EF007251FD /* fitnessAppUITestsLaunchTests.swift in Sources */,
 				5C8F56EA29299B5A0024E023 /* SignUpView.swift in Sources */,

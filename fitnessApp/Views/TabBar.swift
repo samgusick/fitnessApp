@@ -10,7 +10,6 @@ import SwiftUI
 enum Tab: Hashable {
     case home
     case calendar
-    case workout
     case settings
 }
 
@@ -25,21 +24,14 @@ struct TabBar: View {
                     Image(systemName: "house")
                     Text("Home")
                 }
-            //DataView(clickedBack: $clickedBack, title: " Weekly Steps", barColor: .darkRed, data: steps)
             CalendarView(settings: settings)
                 .tag(1)
                 .tabItem {
                     Image(systemName: "calendar")
                     Text("Calendar")
                 }
-            WorkoutsView(settings: settings)
-                .tag(2)
-                .tabItem {
-                    Image(systemName: "figure.walk")
-                    Text("Workouts")
-                }
             SettingsView(settings: settings)
-                .tag(3)
+                .tag(2)
                 .tabItem {
                     Image(systemName: "gear")
                     Text("Settings")

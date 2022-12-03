@@ -19,103 +19,107 @@ struct SettingsView: View {
             Menu("Schedule") {
                 Menu("Sunday") {
                     Button("Push Day", action: {
-                        settings.changeDay(day: settings.sunday, workout: .push)
+                        settings.changeDay(day: &settings.sunday, workout: "Push Day")
                     })
                     Button("Pull Day", action: {
-                        settings.changeDay(day: settings.sunday, workout: .pull)
+                        settings.changeDay(day: &settings.sunday, workout: "Pull Day")
                     })
                     Button("Leg Day", action: {
-                        settings.changeDay(day: settings.sunday, workout: .leg)
+                        settings.changeDay(day: &settings.sunday, workout: "Leg Day")
                     })
                     Button("Rest Day", action: {
-                        settings.changeDay(day: settings.sunday, workout: .off)
+                        settings.changeDay(day: &settings.sunday, workout: "Off Day")
                     })
                 }
                 Menu("Monday") {
                     Button("Push Day", action: {
-                        settings.changeDay(day: settings.monday, workout: .push)
+                        settings.changeDay(day: &settings.monday, workout: "Push Day")
                     })
                     Button("Pull Day", action: {
-                        settings.changeDay(day: settings.monday, workout: .pull)
+                        settings.changeDay(day: &settings.monday, workout: "Pull Day")
                     })
                     Button("Leg Day", action: {
-                        settings.changeDay(day: settings.monday, workout: .leg)
+                        settings.changeDay(day: &settings.monday, workout: "Leg Day")
                     })
                     Button("Rest Day", action: {
-                        settings.changeDay(day: settings.monday, workout: .off)
+                        settings.changeDay(day: &settings.monday, workout: "Off Day")
                     })
                 }
                 Menu("Tuesday") {
                     Button("Push Day", action: {
-                        settings.changeDay(day: settings.tuesday, workout: .push)
+                        settings.changeDay(day: &settings.tuesday, workout: "Push Day")
                     })
                     Button("Pull Day", action: {
-                        settings.changeDay(day: settings.tuesday, workout: .pull)
+                        settings.changeDay(day: &settings.tuesday, workout: "Pull Day")
                     })
                     Button("Leg Day", action: {
-                        settings.changeDay(day: settings.tuesday, workout: .leg)
+                        settings.changeDay(day: &settings.tuesday, workout: "Leg Day")
                     })
                     Button("Rest Day", action: {
-                        settings.changeDay(day: settings.tuesday, workout: .off)
+                        settings.changeDay(day: &settings.tuesday, workout: "Off Day")
                     })
                 }
                 Menu("Wednesday") {
                     Button("Push Day", action: {
-                        settings.changeDay(day: settings.wednesday, workout: .push)
+                        settings.changeDay(day: &settings.wednesday, workout: "Push Day")
                     })
                     Button("Pull Day", action: {
-                        settings.changeDay(day: settings.wednesday, workout: .pull)
+                        settings.changeDay(day: &settings.wednesday, workout: "Pull Day")
                     })
                     Button("Leg Day", action: {
-                        settings.changeDay(day: settings.wednesday, workout: .leg)
+                        settings.changeDay(day: &settings.wednesday, workout: "Leg Day")
                     })
                     Button("Rest Day", action: {
-                        settings.changeDay(day: settings.wednesday, workout: .off)
+                        settings.changeDay(day: &settings.wednesday, workout: "Off Day")
                     })
                 }
                 Menu("Thursday") {
                     Button("Push Day", action: {
-                        settings.changeDay(day: settings.thursday, workout: .push)
+                        settings.changeDay(day: &settings.thursday, workout: "Push Day")
                     })
                     Button("Pull Day", action: {
-                        settings.changeDay(day: settings.thursday, workout: .pull)
+                        settings.changeDay(day: &settings.thursday, workout: "Pull Day")
                     })
                     Button("Leg Day", action: {
-                        settings.changeDay(day: settings.thursday, workout: .leg)
+                        settings.changeDay(day: &settings.thursday, workout: "Leg Day")
                     })
                     Button("Rest Day", action: {
-                        settings.changeDay(day: settings.thursday, workout: .off)
+                        settings.changeDay(day: &settings.thursday, workout: "Off Day")
                     })
                 }
                 Menu("Friday") {
                     Button("Push Day", action: {
-                        settings.changeDay(day: settings.friday, workout: .push)
+                        settings.changeDay(day: &settings.friday, workout: "Push Day")
                     })
                     Button("Pull Day", action: {
-                        settings.changeDay(day: settings.friday, workout: .pull)
+                        settings.changeDay(day: &settings.friday, workout: "Pull Day")
                     })
                     Button("Leg Day", action: {
-                        settings.changeDay(day: settings.friday, workout: .leg)
+                        settings.changeDay(day: &settings.friday, workout: "Leg Day")
                     })
                     Button("Rest Day", action: {
-                        settings.changeDay(day: settings.friday, workout: .off)
+                        settings.changeDay(day: &settings.friday, workout: "Off Day")
                     })
                 }
                 Menu("Saturday") {
                     Button("Push Day", action: {
-                        settings.changeDay(day: settings.saturday, workout: .push)
+                        settings.changeDay(day: &settings.saturday, workout: "Push Day")
                     })
                     Button("Pull Day", action: {
-                        settings.changeDay(day: settings.saturday, workout: .pull)
+                        settings.changeDay(day: &settings.saturday, workout: "Pull Day")
                     })
                     Button("Leg Day", action: {
-                        settings.changeDay(day: settings.saturday, workout: .leg)
+                        settings.changeDay(day: &settings.saturday, workout: "Leg Day")
                     })
                     Button("Rest Day", action: {
-                        settings.changeDay(day: settings.saturday, workout: .off)
+                        settings.changeDay(day: &settings.saturday, workout: "Off Day")
                     })
                 }
             }
+            .foregroundColor(.black)
+                .frame(width: 300, height: 100)
+                .background(Rectangle().fill(settings.accentColor)
+                    .cornerRadius(10))
             Menu {
                 Button("Blue (Default)", action: {
                     settings.changeColor(accent: Color(red: 0.671, green: 0.78, blue: 0.9), background: Color(red: 0.4, green: 0.6, blue: 0.8))
