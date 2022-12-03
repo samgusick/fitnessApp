@@ -19,7 +19,6 @@ struct MotherView: View {
         case .signInPage:
             SignInView()
         case .homePage:
-            //HomeView()
             TabBar()
         }
     }

@@ -36,7 +36,7 @@ struct ProgressRingView: View {
     var colors: [Color] = [Color.darkRed, Color.lightRed]
 //    var progress = CGFloat(500)
 //    var goal = CGFloat(550)
-//    
+    
     var body: some View {
         ZStack {
             Text("\(Int(progress))/ \(Int(goal))\n")
@@ -72,7 +72,7 @@ struct ProgressRingView: View {
     
 }
 
-//
+
 //struct ProgressRingView_Preview: PreviewProvider {
 //    static var previews: some View {
 //        ProgressRingView()

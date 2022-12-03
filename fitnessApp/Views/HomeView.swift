@@ -52,7 +52,6 @@ struct HomeView: View {
     }
     
     private func updateSteps(_ statisticsCollection:  HKStatisticsCollection) {
-        // Change value to get different number of days worth of steps
         let startDate = Calendar.current.date(byAdding: .day, value: -6, to: Date())!
         let endDate = Date()
         steps.removeAll()
@@ -91,7 +90,6 @@ struct HomeView: View {
                         Text(Date(), style: .date)
                             .foregroundColor(.black)
                             .padding([.leading], 100)
-                    
                         HStack {
                             
                             Button {
