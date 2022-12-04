@@ -1,9 +1,10 @@
 {
   "images" : [
     {
+      "filename" : "greyBlue copy.png",
       "idiom" : "universal",
       "platform" : "ios",
-      "size" : "1024x1024"
+      "size" : "1125x1340"
     }
   ],
   "info" : {
