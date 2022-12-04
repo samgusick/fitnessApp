@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "greyBlue copy.png",
+      "filename" : "logo-large.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,7 +12,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "greyBlue copy 1.png",
+      "filename" : "logo-large 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
