@@ -543,6 +543,8 @@
 				DEVELOPMENT_TEAM = 794B97P7XU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FitTrack;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Need step count";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Need step count";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -576,6 +578,8 @@
 				DEVELOPMENT_TEAM = 794B97P7XU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FitTrack;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Need step count";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Need step count";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

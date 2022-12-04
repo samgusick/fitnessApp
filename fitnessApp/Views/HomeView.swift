@@ -138,7 +138,7 @@ struct HomeView: View {
                             .padding([.top], 15)
                         
                     }
-                    .navigationBarTitle(Text("Fitness App"))
+                    .navigationBarTitle(Text("FitTrack"))
                     .navigationBarItems(leading: Image(systemName: "figure.walk").foregroundColor(.black))//systemName: "figure.run")) not available ios 15
                     .font(.title)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
