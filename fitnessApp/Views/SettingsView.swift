@@ -155,15 +155,7 @@ struct SettingsView: View {
         .font(.title)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(red: 0.4, green: 0.6, blue: 0.8).edgesIgnoringSafeArea(.all))
-        Text("HomeView")
-            .navigationTitle("V24")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Sign Out") {
-                        signOutUser()
-                    }
-                }
-            }
+
     }
     
     
