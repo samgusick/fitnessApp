@@ -19,6 +19,14 @@ struct SignInView: View {
     
     var body: some View {
         VStack(spacing: 15) {
+            
+            let handle = Auth.auth().addStateDidChangeListener { (auth, user) in
+                if (user != nil) {
+                    viewRouter.currentPage = .homePage
+                }
+            }
+            
+            
             LogoView()
             Spacer()
             SignInCredentialFields(email: $email, password: $password)

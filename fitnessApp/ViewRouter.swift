@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 class ViewRouter: ObservableObject {
     
     @Published var currentPage: Page = .signInPage
+    
     
 }
 

@@ -10,6 +10,8 @@ import Firebase
 
 
 @main
+
+
 struct fitnessAppApp: App {
     
     @StateObject var viewRouter = ViewRouter()

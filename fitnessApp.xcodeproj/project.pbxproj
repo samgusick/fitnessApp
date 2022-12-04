@@ -540,7 +540,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"fitnessApp/Preview Content\"";
-				DEVELOPMENT_TEAM = VF65W3BJ6N;
+				DEVELOPMENT_TEAM = 794B97P7XU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Need step count";
@@ -573,7 +573,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"fitnessApp/Preview Content\"";
-				DEVELOPMENT_TEAM = VF65W3BJ6N;
+				DEVELOPMENT_TEAM = 794B97P7XU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Need step count";
